@@ -1,450 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="fonts/awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="fonts/proxima/fonts.min.css">
-		<link rel="stylesheet" type="text/css" href="css/reset.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<title>CHECKOUT PAGE</title>
-	</head>
-	<body>
-		<header class="flex-container">
-			<button type="button" id="go-back-button" class="button header-button">
-				<i class="fa fa-long-arrow-left fa-fw" aria-hidden="true"></i>&nbsp;
-				GO BACK
-			</button>
-			<img src="img/logo.png" alt="Logo" class="logo">
-			<button type="button" id="sign-in-button" class="button header-button">
-				<i class="fa fa-user fa-fw" aria-hidden="true"></i>&nbsp;
-				SIGN IN
-			</button>
-		</header>
-		<form action="php/handler.php" method="post">
-			<section class="flex-container">
-				<!-- <legend>YOUR ORDER</legend> -->
-					<fieldset class="summary">
-					<!-- <legend>YOUR ORDER SUMMARY</legend> -->
-					<h1 class="padded">
-						<i class="fa fa-shopping-basket fa-fw" aria-hidden="true"></i>&nbsp;
-						YOUR ORDER
-					</h1>
-					<table id="your-order-table" class="padded tabbed">
-						<tr>
-							<th>ITEMS</th>
-							<th>DETAILS</th>
-							<th>PRICE</th>
-							<th>DELIVERY</th>
-						</tr>
-						<tr>
-							<td>2 documents</td>
-							<td>2 languages</td>
-							<td>$696.06</td>
-							<td>48 hours*</td>
-						</tr>
-					</table>
-				</fieldset>
-				<fieldset class="summary-action">
-					<!-- <legend>YOUR ORDER ACTIONS</legend> -->
-					<button type="submit" id="place-order-button" class="button submit">
-						PLACE ORDER
-					</button>
-					<button type="button" id="print-a-quote-button" class="button form-button">
-						PRINT A QUOTE
-					</button>
-				</fieldset>
-				<fieldset class="help-center">
-					<!-- <legend>HELP CENTER</legend> -->
-					<h1 class="padded">
-						<i class="fa fa-life-ring fa-fw" aria-hidden="true"></i>&nbsp;
-						HELP CENTER
-					</h1>
-					<p class="padded tabbed justified">
-						If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email.
-					</p>
-					<address class="address padded tabbed">
-						<!-- <a href="tel:+971(0)555 555">+971(0)555 555</a>
-						<a href="mailto:help@qtest.com">help@qtest.com</a> -->
-						<span>+971(0)555 555</span>
-						<span>&nbsp;</span>
-						<span>help@qtest.com</span>
-					</address>
-				</fieldset>
-			</section>
-			<section class="flex-container">
-				<!-- <legend>ACTIONS STEP BY STEP</legend> -->
-				<fieldset class="step-by-step">
-					<!-- <legend>SELECT WHAT YOU WANT TO TRANSLATE</legend> -->
-					<h1 class="center padded">SELECT WHAT YOU WANT TO TRANSLATE</h1>
-					<div class="flex-container spaced-around">
-					    <div class="image-radio">
-					    	<label for="website" class="select-type">
-					    		<input required hidden type="radio" id="website" name="trans-type" value="Website">
-					    		<div class="select-wrapper center">
-					    			<p></p>
-					    			<img src="img/website.png" alt="Website" class="select-img tile">
-					    			<p>Website</p>
-					    		</div>
-					    	</label>
-					    </div>
-					    <div class="image-radio">
-					    	<label for="documents" class="select-type">
-					    		<input required hidden checked type="radio" id="documents" name="trans-type" value="Documents">
-					    		<div class="select-wrapper center">
-					    			<p></p>
-					    			<img src="img/documents.png" alt="Documents" class="select-img tile">
-					    			<p>Documents</p>
-					    		</div>
-					    	</label>
-					    </div>
-					    <div class="image-radio">
-					    	<label for="social-account" class="select-type">
-					    		<input required hidden type="radio" id="social-account" name="trans-type" value="Social Account">
-					    		<div class="select-wrapper center">
-					    			<p></p>
-					    			<img src="img/social-account.png" alt="Social Account" class="select-img tile">
-					    			<p>Social Account</p>
-					    		</div>
-					    	</label>
-					    </div>
-					</div>
-				</fieldset>
-				<fieldset class="step-1">
-					<!-- <legend>STEP 1</legend> -->
-					<h1 class="padded">
-						&#9312;&nbsp;<span>Upload your documents</span>&nbsp;<span><small>(Doc, Docx, Text, PDF, Markdown)</small></span>
-					</h1>
-					<label for="upload-button" class="upload-wrapper button form-button tabbed">
-						<input type="file" id="upload-button" name="upload-button" accept=".doc, .docx, .txt, .pdf, .md">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/proxima/fonts.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>CHECKOUT PAGE</title>
+  </head>
+  <body>
+    <header class="flex-container">
+      <button type="button" id="go-back-button" class="button header-button">
+        <i class="fa fa-long-arrow-left fa-fw" aria-hidden="true"></i>&nbsp;
+        GO BACK
+      </button>
+      <img src="img/logo.png" alt="Logo" class="logo">
+      <button type="button" id="sign-in-button" class="button header-button">
+        <i class="fa fa-user fa-fw" aria-hidden="true"></i>&nbsp;
+        SIGN IN
+      </button>
+    </header>
+    <form action="php/handler.php" method="post">
+      <section class="flex-container">
+        <section class="actions flex-container">
+          <!-- <legend>YOUR ORDER</legend> -->
+            <fieldset class="summary">
+            <!-- <legend>YOUR ORDER SUMMARY</legend> -->
+            <h1 class="padded">
+              <i class="fa fa-clipboard fa-fw label" aria-hidden="true"></i>&nbsp;
+              YOUR ORDER
+            </h1>
+            <table id="your-order-table" class="summary-table">
+              <tr>
+                <th>ITEMS</th>
+                <th>DETAILS</th>
+                <th>PRICE</th>
+                <th>DELIVERY</th>
+              </tr>
+              <tr>
+                <td>2 documents</td>
+                <td>2 languages</td>
+                <td>$696.06</td>
+                <td>48 hours*</td>
+              </tr>
+            </table>
+          </fieldset>
+          <fieldset class="summary-action flex-container-column">
+            <!-- <legend>YOUR ORDER ACTIONS</legend> -->
+            <button type="submit" id="place-order-button" class="button submit">
+              PLACE ORDER
+            </button>
+            <button type="button" id="print-a-quote-button" class="button form-button">
+              PRINT A QUOTE
+            </button>
+          </fieldset>
+        </section>
+        <fieldset class="help-center">
+          <!-- <legend>HELP CENTER</legend> -->
+          <h1 class="padded">
+            <i class="fa fa-life-ring fa-fw label" aria-hidden="true"></i>&nbsp;
+            HELP CENTER
+          </h1>
+          <p class="padded tabbed justified">
+            If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email.
+          </p>
+          <address class="address padded tabbed">
+            <!-- <a href="tel:+971(0)555 555">+971(0)555 555</a>
+            <a href="mailto:help@qtest.com">help@qtest.com</a> -->
+            <span>+971(0)555 555</span>
+            <span>&nbsp;</span>
+            <span>help@qtest.com</span>
+          </address>
+        </fieldset>
+      </section>
+      <section class="flex-container">
+        <!-- <legend>ACTIONS STEP BY STEP</legend> -->
+        <fieldset class="step-by-step">
+          <!-- <legend>SELECT WHAT YOU WANT TO TRANSLATE</legend> -->
+          <div class="sbs-wrapper">
+            <h1 class="center padded">SELECT WHAT YOU WANT TO TRANSLATE</h1>
+          </div>
+          <div class="flex-container spaced-around">
+              <div class="image-radio">
+                <label for="website" class="select-type">
+                  <input required hidden type="radio" id="website" name="trans-type" value="Website">
+                  <div class="select-wrapper center">
+                    <p></p>
+                    <img src="img/website.png" alt="Website" class="select-img tile">
+                    <p>Website</p>
+                  </div>
+                </label>
+              </div>
+              <div class="image-radio">
+                <label for="documents" class="select-type">
+                  <input required hidden checked type="radio" id="documents" name="trans-type" value="Documents">
+                  <div class="select-wrapper center">
+                    <p></p>
+                    <img src="img/documents.png" alt="Documents" class="select-img tile">
+                    <p>Documents</p>
+                  </div>
+                </label>
+              </div>
+              <div class="image-radio">
+                <label for="social-account" class="select-type">
+                  <input required hidden type="radio" id="social-account" name="trans-type" value="Social Account">
+                  <div class="select-wrapper center">
+                    <p></p>
+                    <img src="img/social-account.png" alt="Social Account" class="select-img tile">
+                    <p>Social Account</p>
+                  </div>
+                </label>
+              </div>
+          </div>
+        </fieldset>
+        <fieldset class="step-1 flex-container">
+          <!-- <legend>STEP 1</legend> -->
+          <h1 class="step-styled padded">
+            &#9312;&nbsp;<span>Upload your documents</span>&nbsp;<span><small>(Doc, Docx, Text, PDF, Markdown)</small></span>
+          </h1>
+          <label for="upload-button" class="upload-wrapper button form-button tabbed">
+            <input type="file" id="upload-button" name="upload-button" accept=".doc, .docx, .txt, .pdf, .md">
                         <i class="fa fa-cloud-upload fa-fw" aria-hidden="true"></i>&nbsp;
                         Upload a new file 
-                    </label>
-					<table class="thin-border tabbed">
-						<tr>
-							<th>FILE NAME</th>
-							<th>FILE SIZE</th>
-							<th>NUMBER OF WORDS</th>
-							<th>REMOVE</th>
-						</tr>
-						<tr>
-							<td>
-								<i class="fa fa-file-text fa-fw" aria-hidden="true"></i>&nbsp;
-								business_operations.docx
-							</td>
-							<td>78kb</td>
-							<td>842</td>
-							<td>
-								<i class="fa fa-trash fa-fw" aria-hidden="true"></i>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<i class="fa fa-file-text fa-fw" aria-hidden="true"></i>&nbsp;
-								business_financial.docx
-							</td>
-							<td>26kb</td>
-							<td>2,326</td>
-							<td>
-								<i class="fa fa-trash fa-fw" aria-hidden="true"></i>
-							</td>
-						</tr>
-					</table>
-				</fieldset>
-				<fieldset class="step-2">
-					<!-- <legend>STEP 2</legend> -->
-					<h1 class="padded">
-						&#9313;&nbsp;Choose your language pairings
-					</h1>
-					<table id="fictive-table" class="fictive-table tabbed">
-						<tr>
-							<th class="right-justified">FROM</th>
-							<th>
-								<label for="from-lang" class="select-wrapper-2">
-									<select name="from-lang" id="from-lang" class="select-hidden">
-										<option>English</option>
-										<option>Arabic</option>
-										<option>Kurdish</option>
-									</select>
-								</label>
-							</th>
-							<th></th>
-							<th></th>
-							<th></th>
-						</tr>
-						<tr>
-							<th class="right-justified">TO</th>
-							<th>
-								<label for="to-lang" class="select-wrapper-2">
-									<select name="to-lang" id="to-lang" class="select-hidden">
-										<option>Arabic</option>
-										<option>English</option>
-										<option>Kurdish</option>
-									</select>
-								</label>
-							</th>
-							<th>
-								<label for="add-lang" class="select-wrapper-2">
-									<select name="add-lang" id="add-lang" class="select-hidden">
-										<option>Kurdish</option>
-										<option>English</option>
-										<option>Arabic</option>
-									</select>
-								</label>
-							</th>
-							<th>
-								<p class="trash-icon">
-									<i class="fa fa-trash fa-fw" aria-hidden="true"></i>
-								</p>
-							</th>
-							<th>
-								<button type="button" class="add-button">
-									<i class="fa fa-plus fa-fw" aria-hidden="true"></i>&nbsp;
-									ADD
-								</button>
-							</th>
-						</tr>
-					</table>
-				</fieldset>
-				<fieldset class="step-3">
-					<!-- <legend>STEP 3</legend> -->
-					<h1 class="padded">
-						&#9314;&nbsp;Select your desired tone
-					</h1>
-					<ul class="tabbed dots-hidden">
-					    <li class="padded">
-					    	<label for="frendly-casual" class="select-type">
-					      		<input required hidden checked type="radio" id="frendly-casual" name="tone" value="Frendly/Casual">
-					      		<div class="select-wrapper padded-more">
-					      			<i class="fa fa-comments fa-fw" aria-hidden="true"></i>&nbsp;
-						      		Frendly/Casual
-					      		</div>
-						    </label>
-					    </li>
-					    <li class="padded">
-					    	<label for="corporate-pro" class="select-type">
-					      		<input required hidden type="radio" id="corporate-pro" name="tone" value="Corporate/Pro">
-					      		<div class="select-wrapper padded-more">
-					      			<i class="fa fa-suitcase fa-fw" aria-hidden="true"></i>&nbsp;
-					      			Corporate/Pro
-					      		</div>
-						    </label>
-					    </li>
-					    <li class="padded">
-					    	<label for="media-formal"  class="select-type">
-					      		<input required hidden type="radio" id="media-formal" name="tone" value="Media/Formal">
-					      		<div class="select-wrapper padded-more">
-					      			<i class="fa fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;
-					      			Media/Formal
-					      		</div>
-						    </label>
-					    </li>
-					</ul>
-				</fieldset>
-				<fieldset class="step-4">
-					<!-- <legend>STEP 4</legend> -->
-					<h1 class="padded">
-						&#9315;&nbsp;Tell us how urgent this job is
-					</h1>
-					<div class="flex-container spaced-around">
-						<div class="flex-container four-fifth-width">
-							<div class="full-width padded">
-								<input type="range" name="urgency" id="urgency" min=0 max=2 step=1 value=1>
-							</div>
-							<div class="flex-container full-width bottom-padded">
-								<span>I GOT TIME</span><span class="orange">AVERAGE</span><span>YESTERDAY</span>
-							</div>
-						</div>
-						<div class="box">
-							<!-- <legend>TIMELINE INFO</legend> -->
-							<h2>
-								<i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>&nbsp;
-								TIMELINE INFO
-							</h2>
-							<p class="justified">
-								With an <span class="orange">AVERAGE</span> timeline set up, our expert translator can take a reasonable amount of time perfecting your translation
-							</p>
-						</div>
-					</div>
-				</fieldset>
-				<fieldset class="step-5">
-					<!-- <legend>STEP 5</legend> -->
-					<h1 class="padded">
-						&#9316;&nbsp;Sign up and choose a payment method
-					</h1>
-					<p class="caption tabbed top-padded bottom-padded">
-						Already have an account with us? <a href="#">Sign In</a>.
+          </label>
+          <div class="thin-border-table-wrapper tabbed">
+            <table class="thin-border-table">
+              <tr>
+                <th>FILE NAME</th>
+                <th>FILE SIZE</th>
+                <th>NUMBER OF WORDS</th>
+                <th>REMOVE</th>
+              </tr>
+              <tr>
+                <td>
+                  <i class="fa fa-file-text fa-fw" aria-hidden="true"></i>&nbsp;
+                  business_operations.docx
+                </td>
+                <td>78kb</td>
+                <td>842</td>
+                <td>
+                  <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="fa fa-file-text fa-fw" aria-hidden="true"></i>&nbsp;
+                  business_financial.docx
+                </td>
+                <td>26kb</td>
+                <td>2,326</td>
+                <td>
+                  <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </fieldset>
+        <fieldset class="step-2">
+          <!-- <legend>STEP 2</legend> -->
+          <h1 class="step-styled padded">
+            &#9313;&nbsp;Choose your language pairings
+          </h1>
+          <table id="fictive-table" class="fictive-table tabbed">
+            <tr>
+              <th class="right-justified">FROM</th>
+              <th>
+                <label for="from-lang" class="select-wrapper-2">
+                  <select name="from-lang" id="from-lang" class="select-hidden">
+                    <option>English</option>
+                    <option>Arabic</option>
+                    <option>Kurdish</option>
+                  </select>
+                </label>
+              </th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            <tr>
+              <th class="right-justified">TO</th>
+              <th>
+                <label for="to-lang" class="select-wrapper-2">
+                  <select name="to-lang" id="to-lang" class="select-hidden">
+                    <option>Arabic</option>
+                    <option>English</option>
+                    <option>Kurdish</option>
+                  </select>
+                </label>
+              </th>
+              <th>
+                <label for="add-lang" class="select-wrapper-2">
+                  <select name="add-lang" id="add-lang" class="select-hidden">
+                    <option>Kurdish</option>
+                    <option>English</option>
+                    <option>Arabic</option>
+                  </select>
+                </label>
+              </th>
+              <th>
+                <p class="trash-icon">
+                  <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+                </p>
+              </th>
+              <th>
+                <button type="button" class="add-button">
+                  <i class="fa fa-plus fa-fw" aria-hidden="true"></i>&nbsp;
+                  ADD
+                </button>
+              </th>
+            </tr>
+          </table>
+        </fieldset>
+        <fieldset class="step-3">
+          <!-- <legend>STEP 3</legend> -->
+          <h1 class="step-styled padded">
+            &#9314;&nbsp;Select your desired tone
+          </h1>
+          <ul class="tabbed dots-hidden">
+              <li class="padded">
+                <label for="frendly-casual" class="select-type">
+                    <input required hidden checked type="radio" id="frendly-casual" name="tone" value="Frendly/Casual">
+                    <div class="select-wrapper">
+                      <i class="fa fa-comments fa-fw" aria-hidden="true"></i>&nbsp;
+                      Frendly/Casual
+                    </div>
+                </label>
+              </li>
+              <li class="padded">
+                <label for="corporate-pro" class="select-type">
+                    <input required hidden type="radio" id="corporate-pro" name="tone" value="Corporate/Pro">
+                    <div class="select-wrapper padded-more">
+                      <i class="fa fa-suitcase fa-fw" aria-hidden="true"></i>&nbsp;
+                      Corporate/Pro
+                    </div>
+                </label>
+              </li>
+              <li class="padded">
+                <label for="media-formal"  class="select-type">
+                    <input required hidden type="radio" id="media-formal" name="tone" value="Media/Formal">
+                    <div class="select-wrapper padded-more">
+                      <i class="fa fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;
+                      Media/Formal
+                    </div>
+                </label>
+              </li>
+          </ul>
+        </fieldset>
+        <fieldset class="step-4">
+          <!-- <legend>STEP 4</legend> -->
+          <h1 class="step-styled padded">
+            &#9315;&nbsp;Tell us how urgent this job is
+          </h1>
+          <div class="flex-container spaced-around">
+            <div class="flex-container four-fifth-width">
+              <div class="full-width padded">
+                <input type="range" name="urgency" id="urgency" min=0 max=2 step=1 value=1>
+              </div>
+              <div class="flex-container full-width bottom-padded">
+                <span>I GOT TIME</span><span class="orange">AVERAGE</span><span>YESTERDAY</span>
+              </div>
+            </div>
+            <div class="box">
+              <!-- <legend>TIMELINE INFO</legend> -->
+              <h2>
+                <i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>&nbsp;
+                TIMELINE INFO
+              </h2>
+              <p class="justified">
+                With an <span class="orange">AVERAGE</span> timeline set up, our expert translator can take a reasonable amount of time perfecting your translation
+              </p>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="step-5">
+          <!-- <legend>STEP 5</legend> -->
+          <h1 class="step-styled padded">
+            &#9316;&nbsp;Sign up and choose a payment method
+          </h1>
+          <p class="caption tabbed top-padded bottom-padded">
+            Already have an account with us? <a href="#">Sign In</a>.
                     </p>
                     <div class="flex-start tabbed">
                         <div>
                             <p class="caption">
-                            	FULL NAME
+                              FULL NAME
                             </p>
-	                        <input 
-	                        	class="input-field" 
-	                        	required id="full-name" 
-	                        	type="text" 
-	                        	name="full-name" 
-	                        	value="Andrew A. Omelchenko"
-	                        	title="Please enter your full name here">
+                          <input 
+                            class="input-field" 
+                            required id="full-name" 
+                            type="text" 
+                            name="full-name" 
+                            value="Andrew A. Omelchenko"
+                            title="Please enter your full name here">
                             <label for="full-name"></label>
                         </div>
                     </div>
                     <div class="flex-start tabbed">
                         <div>
                             <p class="caption">
-                            	EMAIL ADDRESS
+                              EMAIL ADDRESS
                             </p>
                             <input 
-                            	class="input-field" 
-                            	required id="e-mail" 
-                            	type="email" 
-                            	name="e-mail" 
-                            	value="andrewom43@gmail.com"
-                            	title="Enter valid e-mail address">
+                              class="input-field" 
+                              required id="e-mail" 
+                              type="email" 
+                              name="e-mail" 
+                              value="andrewom43@gmail.com"
+                              title="Enter valid e-mail address">
                             <label for="e-mail"></label>
                         </div>
                         <div>
                             <p class="caption">
-                            	CHOOSE A PASSWORD
+                              CHOOSE A PASSWORD
                             </p>
                             <input 
-                            	class="input-field" 
-                            	required id="psw" 
-                            	type="password" 
-                            	name="psw" 
-                            	minlength="6"
-                            	placeholder="******"
-                            	title="Password should be at least 6 characters long">
-                        	<label for="psw"></label>
+                              class="input-field" 
+                              required id="psw" 
+                              type="password" 
+                              name="psw" 
+                              minlength="6"
+                              placeholder="******"
+                              title="Password should be at least 6 characters long">
+                          <label for="psw"></label>
                         </div>
                     </div>
-					<div class="flex-container spaced-between tabbed seven-tenth-width">
-				    	<label for="by-card" class="select-type quartered">
-				    		<input required hidden checked type="radio" id="by-card" name="payment-type" value="by-card">
-				    		<div class="select-wrapper center">
-				    			<img src="img/cards.png" alt="Cards" class="select-img three-times-quartered">
-				    		</div>
-				    	</label>
-				    	<label for="by-paypal" class="select-type quartered">
-				    		<input required hidden type="radio" id="by-paypal" name="payment-type" value="by-paypal">
-				    		<div class="select-wrapper center">
-				    			<img src="img/paypal.png" alt="PayPal" class="select-img three-times-quartered">
-				    		</div>
-				    	</label>
-				    	<label for="by-amazon" class="select-type quartered">
-				    		<input required hidden type="radio" id="by-amazon" name="payment-type" value="by-amazon">
-				    		<div class="select-wrapper center">
-				    			<img src="img/amazon.png" alt="Amazon" class="select-img three-times-quartered">
-				    		</div>
-				    	</label>
-					</div>
-					<div class="flex-start tabbed with-top-margin">
+          <div class="flex-container spaced-between tabbed seven-tenth-width">
+              <label for="by-card" class="select-type quartered">
+                <input required hidden checked type="radio" id="by-card" name="payment-type" value="by-card">
+                <div class="select-wrapper center">
+                  <img src="img/cards.png" alt="Cards" class="select-img three-times-quartered">
+                </div>
+              </label>
+              <label for="by-paypal" class="select-type quartered">
+                <input required hidden type="radio" id="by-paypal" name="payment-type" value="by-paypal">
+                <div class="select-wrapper center">
+                  <img src="img/paypal.png" alt="PayPal" class="select-img three-times-quartered">
+                </div>
+              </label>
+              <label for="by-amazon" class="select-type quartered">
+                <input required hidden type="radio" id="by-amazon" name="payment-type" value="by-amazon">
+                <div class="select-wrapper center">
+                  <img src="img/amazon.png" alt="Amazon" class="select-img three-times-quartered">
+                </div>
+              </label>
+          </div>
+          <div class="flex-start tabbed with-top-margin">
                         <div>
                             <p class="caption">
-                            	CARD NUMBER
+                              CARD NUMBER
                             </p>
                             <label for="card-number" class="card-number-wrapper">
-	                            <input 
-	                            	class="input-field-2 wide center"
-	                            	id="card-number" 
-	                            	type="text" 
-	                            	name="card-number" 
-	                            	maxlength="16"
-	                            	placeholder="################"
-	                            	pattern="[0-9]{16}"
-	                            	title="Enter 16-digit card number">
+                              <input 
+                                class="input-field-2 wide center"
+                                id="card-number" 
+                                type="text" 
+                                name="card-number" 
+                                maxlength="16"
+                                placeholder="################"
+                                pattern="[0-9]{16}"
+                                title="Enter 16-digit card number">
                             </label>
                         </div>
                         <div>
                             <p class="caption">
-                            	EXPIRY DATE
+                              EXPIRY DATE
                             </p>
                             <input 
-                            	class="input-field-2 center" 
-                            	id="expiry-date" 
-                            	type="text" 
-                            	name="expiry-date" 
-                            	placeholder="DD/MM/YY"
-                            	title="Enter your card's expiry date">
+                              class="input-field-2 center" 
+                              id="expiry-date" 
+                              type="text" 
+                              name="expiry-date" 
+                              placeholder="DD/MM/YY"
+                              title="Enter your card's expiry date">
                         </div>
                         <div>
                             <p class="caption">
-                            	CODE
+                              CODE
                             </p>
                             <input 
-                            	class="input-field-2 center" 
-                            	id="cvv" 
-                            	type="password" 
-                            	name="cvv" 
-                            	maxlength="3"
-                            	placeholder="***"
-                            	title="Enter 3-digit CVV code here"
-                            	pattern="[0-9][0-9][0-9]">
+                              class="input-field-2 center" 
+                              id="cvv" 
+                              type="password" 
+                              name="cvv" 
+                              maxlength="3"
+                              placeholder="***"
+                              title="Enter 3-digit CVV code here"
+                              pattern="[0-9][0-9][0-9]">
                         </div>
                     </div>
-				</fieldset>
-			</section>
-			<section class="flex-end">
-				<!-- <legend>FINAL ACTIONS</legend> -->
-				<label for="terms-checkbox" class="right-tabbed">
-					<input type="checkbox" id="terms-checkbox" name="terms-and-conditions" value="agreed">
-					I agree to the <a href="#">Terms &amp; Conditions</a>
-				</label>
-				<button type="submit" class="button submit right-tabbed" id="place-order-button-2">
-					PLACE ORDER
-				</button>
-				<button type="button" class="button form-button right-tabbed" id="print-a-quote-button-2">
-					PRINT A QUOTE
-				</button>
-			</section>
-		</form>
-		<footer class="main-footer">
-			<div class="footer-filler"></div>
-			<div class="footer-body flex-container">
-	            <div class="one-fifth-width">
-	            	<h2 class="bottom-padded">
-	                	<i class="fa fa-heart fa-fw" aria-hidden="true"></i>&nbsp;
-	                	WHAT WE DO
-	            	</h2>
-	                <p class="tabbed-less">
-	                    We provide a full range of language services including content development, 
-	                    document, website and social media accounts translations.
-	                </p>
-	            </div>
-	            <div class="one-fifth-width">
-	            	<h2 class="bottom-padded">
-	                	<i class="fa fa-compass fa-fw" aria-hidden="true"></i>&nbsp;
-	                	OUR MAIN OFFICE
-	            	</h2>
-	                <address class="tabbed-less">
-	                    <ul>
-	                        <li class="less-bottom-padded">Dubai, UAE</li>
-	                        <li class="less-bottom-padded">P.O. Box: 502735</li>
-	                        <li class="less-bottom-padded">Phone: +971(0)44278128</li>
-	                    </ul>
-	                </address>
-	            </div>
-	            <div class="one-fifth-width">
-	            	<h2 class="bottom-padded">
-	                	<i class="fa fa-share-alt fa-fw" aria-hidden="true"></i>&nbsp;
-	                	CONNECT WITH US
-	            	</h2>
-	                <ul class="dots-hidden tabbed-less">
-	                    <li class="less-bottom-padded">
-	                    	<i class="fa fa-facebook-official fa-fw" aria-hidden="true"></i>&nbsp;<a title="Facebook" href="#">Facebook</a>
-	                    </li>
-	                    <li class="less-bottom-padded">
-	                    	<i class="fa fa-twitter-square fa-fw" aria-hidden="true"></i>&nbsp;<a title="Twitter" href="#">Twitter</a>
-	                    </li>
-	                    <li class="less-bottom-padded">
-	                    	<i class="fa fa-linkedin-square fa-fw" aria-hidden="true"></i>&nbsp;<a title="LinkedIn" href="#">LinkedIn</a>
-	                    </li>
-	                </ul>
-	            </div>
-	            <img class="logo" src="img/darklogo.png" alt="logo">
-        	</div>
-        	<div class="footer-filler"></div>
-	    </footer>
-	</body>
+        </fieldset>
+      </section>
+      <section class="flex-end">
+        <!-- <legend>FINAL ACTIONS</legend> -->
+        <label for="terms-checkbox" class="right-tabbed">
+          <input type="checkbox" id="terms-checkbox" name="terms-and-conditions" value="agreed">
+          I agree to the <a href="#">Terms &amp; Conditions</a>
+        </label>
+        <button type="submit" class="button submit right-tabbed" id="place-order-button-2">
+          PLACE ORDER
+        </button>
+        <button type="button" class="button form-button right-tabbed" id="print-a-quote-button-2">
+          PRINT A QUOTE
+        </button>
+      </section>
+    </form>
+    <footer class="main-footer">
+      <div class="footer-filler"></div>
+      <div class="footer-body flex-container">
+              <div class="one-fifth-width">
+                <h2 class="bottom-padded">
+                    <i class="fa fa-heart fa-fw" aria-hidden="true"></i>&nbsp;
+                    WHAT WE DO
+                </h2>
+                  <p class="tabbed-less">
+                      We provide a full range of language services including content development, 
+                      document, website and social media accounts translations.
+                  </p>
+              </div>
+              <div class="one-fifth-width">
+                <h2 class="bottom-padded">
+                    <i class="fa fa-compass fa-fw" aria-hidden="true"></i>&nbsp;
+                    OUR MAIN OFFICE
+                </h2>
+                  <address class="tabbed-less">
+                      <ul>
+                          <li class="less-bottom-padded">Dubai, UAE</li>
+                          <li class="less-bottom-padded">P.O. Box: 502735</li>
+                          <li class="less-bottom-padded">Phone: +971(0)44278128</li>
+                      </ul>
+                  </address>
+              </div>
+              <div class="one-fifth-width">
+                <h2 class="bottom-padded">
+                    <i class="fa fa-share-alt fa-fw" aria-hidden="true"></i>&nbsp;
+                    CONNECT WITH US
+                </h2>
+                  <ul class="dots-hidden tabbed-less">
+                      <li class="less-bottom-padded">
+                        <i class="fa fa-facebook-official fa-fw" aria-hidden="true"></i>&nbsp;Facebook
+                      </li>
+                      <li class="less-bottom-padded">
+                        <i class="fa fa-twitter-square fa-fw" aria-hidden="true"></i>&nbsp;Twitter
+                      </li>
+                      <li class="less-bottom-padded">
+                        <i class="fa fa-linkedin-square fa-fw" aria-hidden="true"></i>&nbsp;LinkedIn
+                      </li>
+                  </ul>
+              </div>
+              <img class="logo" src="img/darklogo.png" alt="logo">
+          </div>
+          <div class="footer-filler"></div>
+      </footer>
+  </body>
 </html>
