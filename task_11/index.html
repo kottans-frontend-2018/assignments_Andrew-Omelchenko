@@ -86,7 +86,6 @@
                 <label class="select-type" for="website">
                   <input id="website" name="trans-type" type="radio" value="Website" required hidden>
                   <div class="select-wrapper center">
-                    <p></p>
                     <img class="select-img tile" src="img/website.png" alt="Website">
                     <p>Website</p>
                   </div>
@@ -96,7 +95,6 @@
                 <label class="select-type" for="documents">
                   <input id="documents" name="trans-type" type="radio" value="Documents" required hidden checked>
                   <div class="select-wrapper center">
-                    <p></p>
                     <img class="select-img tile" src="img/documents.png" alt="Documents">
                     <p>Documents</p>
                   </div>
@@ -106,7 +104,6 @@
                 <label class="select-type" for="social-account">
                   <input id="social-account" name="trans-type" type="radio" value="Social Account" required hidden>
                   <div class="select-wrapper center">
-                    <p></p>
                     <img class="select-img tile" src="img/social-account.png" alt="Social Account">
                     <p>Social Account</p>
                   </div>
@@ -140,7 +137,9 @@
                 <td>78kb</td>
                 <td>842</td>
                 <td>
-                  <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+                  <button class="trash-button" type="button">
+                    <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -151,7 +150,9 @@
                 <td>26kb</td>
                 <td>2,326</td>
                 <td>
-                  <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+                  <button class="trash-button" type="button">
+                    <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+                  </button>
                 </td>
               </tr>
             </table>
@@ -199,9 +200,9 @@
                 </label>
               </th>
               <th>
-                <p class="trash-icon">
+                <button class="trash-button trash-icon" type="button">
                   <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
-                </p>
+                </button>
               </th>
               <th>
                 <button class="add-button" type="button">
@@ -219,11 +220,13 @@
           </h1>
           <ul class="tabbed dots-hidden">
               <li class="padded">
-                <label class="select-type" for="frendly-casual">
-                    <input id="frendly-casual" name="tone" type="radio" value="Frendly/Casual" required hidden checked>
+                <label class="select-type" for="friendly-casual">
+                    <input id="friendly-casual" name="tone" type="radio" value="Friendly/Casual" required hidden checked>
                     <div class="select-wrapper">
-                      <i class="fa fa-comments fa-fw" aria-hidden="true"></i>&nbsp;
-                      Frendly/Casual
+                      <p class="with-padding">
+                        <i class="fa fa-comments fa-fw" aria-hidden="true"></i>&nbsp;
+                        Friendly/Casual
+                      </p>
                     </div>
                 </label>
               </li>
@@ -231,8 +234,10 @@
                 <label class="select-type" for="corporate-pro">
                     <input id="corporate-pro" name="tone" type="radio" value="Corporate/Pro" required hidden>
                     <div class="select-wrapper padded-more">
-                      <i class="fa fa-suitcase fa-fw" aria-hidden="true"></i>&nbsp;
-                      Corporate/Pro
+                      <p class="with-padding">
+                        <i class="fa fa-suitcase fa-fw" aria-hidden="true"></i>&nbsp;
+                        Corporate/Pro
+                      </p>
                     </div>
                 </label>
               </li>
@@ -240,8 +245,10 @@
                 <label class="select-type" for="media-formal">
                     <input id="media-formal" name="tone" type="radio" value="Media/Formal" required hidden>
                     <div class="select-wrapper padded-more">
-                      <i class="fa fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;
-                      Media/Formal
+                      <p class="with-padding">
+                        <i class="fa fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;
+                        Media/Formal
+                      </p>
                     </div>
                 </label>
               </li>

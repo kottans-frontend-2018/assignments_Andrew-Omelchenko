@@ -206,6 +206,10 @@ p {
   margin: 10px 0;
 }
 
+.button:hover {
+  opacity: 0.5;
+}
+
 .header-button {
   background: #eceef4;
   color: #a5abc5;
@@ -295,6 +299,17 @@ p {
   font-size: 10pt;
 }
 
+.trash-button {
+  color: #a5abc5;
+  background: white;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.trash-button:hover {
+  opacity: 0.5;
+}
+
 .trash-icon {
   font-weight: bold;
   font-size: 14pt;
@@ -317,14 +332,16 @@ p {
   text-align-last: center;
 }
 
+.add-button:hover {
+  opacity: 0.5;
+}
+
 #upload-button {
   margin-bottom: 20px;
 }
 
 .image-radio {
   width: 25%;
-  border: 1px solid #d7d9e0;
-  border-radius: 5px;
 }
 
 .image-radio p {
@@ -332,8 +349,8 @@ p {
 }
 
 .tile {
-  width: 50%;
-  padding: 12px 21px 0 21px;
+  width: 48%;
+  padding: 18px 0 0 0;
 }
 
 .step-styled {
@@ -475,7 +492,7 @@ p {
 }
 
 .three-times-quartered {
-  max-width: 75%;
+  width: 100%;
   padding: 0px;
 }
 
@@ -505,6 +522,18 @@ p {
   font-size: 8pt;
 }
 
+.with-padding {
+  padding: 18px 33px 18px 33px;
+}
+
+#terms-checkbox {
+  cursor: pointer;
+}
+
+#terms-checkbox:hover {
+  opacity: 0.5;
+}
+
 /* Styles for checked borders (new - from lecture) */
 
 .select-wrapper {
@@ -514,15 +543,18 @@ p {
   background: #f7f7fa;
   cursor: pointer;
   color: #a5abc5;
-  border: 1px solid #a5abc5;
-  border-radius: 5px;
+  border: 2px solid #d7d9e0;
   font-size: 10pt;
   font-weight: bold;
-  padding: 24px 42px 24px 42px;
+  padding: 3px 3px 3px 3px;
+}
+
+.select-wrapper:hover {
+  opacity: 0.5;
 }
 
 input[type="radio"]:checked + .select-wrapper {
-  border: 3px solid #76a7e1;
+  border: 4px solid #76a7e1;
   border-radius: 5px;
 }
 
@@ -542,11 +574,11 @@ input[type="radio"]:checked + .select-wrapper:after {
 /* Upload wrapper */
 
 .upload-wrapper{
-    width: 243px;
-    display: flex;
-    flex-flow: row wrap;
+  width: 243px;
+  display: flex;
+  flex-flow: row wrap;
   justify-content: center;
-    align-content: center;
+  align-content: center;
   align-items: center;
 }
 
@@ -617,6 +649,10 @@ input[type=range]:after {
   overflow: hidden;
   border-radius: 3px;
   color: #a5abc5;
+}
+
+.select-wrapper-2:hover {
+  opacity: 0.5;
 }
 
 .select-wrapper-2:after {
