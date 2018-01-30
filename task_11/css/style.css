@@ -531,7 +531,12 @@ p {
 }
 
 #terms-checkbox:hover {
-  opacity: 0.5;
+  opacity: 0.7;
+}
+
+.image-radio, .wrapper {
+  border: 1px solid #d7d9e0;
+  border-radius: 5px;
 }
 
 /* Styles for checked borders (new - from lecture) */
@@ -543,14 +548,14 @@ p {
   background: #f7f7fa;
   cursor: pointer;
   color: #a5abc5;
-  border: 2px solid #d7d9e0;
+  border: 4px solid transparent;
   font-size: 10pt;
   font-weight: bold;
   padding: 3px 3px 3px 3px;
 }
 
 .select-wrapper:hover {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 input[type="radio"]:checked + .select-wrapper {
@@ -652,7 +657,7 @@ input[type=range]:after {
 }
 
 .select-wrapper-2:hover {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .select-wrapper-2:after {
