@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/proxima/fonts.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>CHECKOUT PAGE</title>
+  </head>
+  <body>
+    <header class="flex-container">
+      <button class="button header-button" id="go-back-button" type="button">
+        <i class="fa fa-long-arrow-left fa-fw" aria-hidden="true"></i>&nbsp;
+        GO BACK
+      </button>
+      <img class="logo" src="img/logo.png" alt="Logo">
+      <button class="button header-button" id="sign-in-button" type="button">
+        <i class="fa fa-user fa-fw" aria-hidden="true"></i>&nbsp;
+        SIGN IN
+      </button>
+    </header>
+    <form action="php/handler.php" method="post">
+      <section class="flex-container">
+        <section class="actions flex-container">
+          <!-- <legend>YOUR ORDER</legend> -->
+            <fieldset class="summary">
+            <!-- <legend>YOUR ORDER SUMMARY</legend> -->
+            <h1 class="padded">
+              <i class="fa fa-clipboard fa-fw label" aria-hidden="true"></i>&nbsp;
+              YOUR ORDER
+            </h1>
+            <table class="summary-table" id="your-order-table">
+              <tr>
+                <th>ITEMS</th>
+                <th>DETAILS</th>
+                <th>PRICE</th>
+                <th>DELIVERY</th>
+              </tr>
+              <tr>
+                <td>2 documents</td>
+                <td>2 languages</td>
+                <td>$696.06</td>
+                <td>48 hours*</td>
+              </tr>
+            </table>
+          </fieldset>
+          <fieldset class="summary-action flex-container-column">
+            <!-- <legend>YOUR ORDER ACTIONS</legend> -->
+            <button class="button submit" id="place-order-button" type="submit">
+              PLACE ORDER
+            </button>
+            <button class="button form-button" id="print-a-quote-button" type="button">
+              PRINT A QUOTE
+            </button>
+          </fieldset>
+        </section>
+        <fieldset class="help-center">
+          <!-- <legend>HELP CENTER</legend> -->
+          <h1 class="padded">
+            <i class="fa fa-life-ring fa-fw label" aria-hidden="true"></i>&nbsp;
+            HELP CENTER
+          </h1>
+          <p class="padded tabbed justified">
+            If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email.
+          </p>
+          <address class="address padded tabbed">
+            <!-- <a href="tel:+971(0)555 555">+971(0)555 555</a>
+            <a href="mailto:help@qtest.com">help@qtest.com</a> -->
+            <span>+971(0)555 555</span>
+            <span>&nbsp;</span>
+            <span>help@qtest.com</span>
+          </address>
+        </fieldset>
+      </section>
+      <section class="flex-container">
+        <!-- <legend>ACTIONS STEP BY STEP</legend> -->
+        <fieldset class="step-by-step">
+          <!-- <legend>SELECT WHAT YOU WANT TO TRANSLATE</legend> -->
+          <div class="sbs-wrapper">
+            <h1 class="center padded">SELECT WHAT YOU WANT TO TRANSLATE</h1>
+          </div>
+          <div class="flex-container spaced-around">
+              <div class="image-radio wrapper">
+                <label class="select-type" for="website">
+                  <input class="hidden" id="website" name="trans-type" type="radio" value="Website" required>
+                  <span class="select-wrapper block">
+                    <img class="select-img tile" src="img/website.png" alt="Website">
+                  </span>
+                </label>
+              </div>
+              <div class="image-radio wrapper">
+                <label class="select-type" for="documents">
+                  <input class="hidden" id="documents" name="trans-type" type="radio" value="Documents" required checked>
+                  <span class="select-wrapper block">
+                    <img class="select-img tile" src="img/documents.png" alt="Documents">
+                  </span>
+                </label>
+              </div>
+              <div class="image-radio wrapper">
+                <label class="select-type" for="social-account">
+                  <input class="hidden" id="social-account" name="trans-type" type="radio" value="Social Account" required>
+                  <span class="select-wrapper block">
+                    <img class="select-img tile" src="img/social-account.png" alt="Social Account">
+                  </span>
+                </label>
+              </div>
+          </div>
+        </fieldset>
+        <fieldset class="step-1 flex-container">
+          <!-- <legend>STEP 1</legend> -->
+          <h1 class="step-styled padded">
+            &#9312;&nbsp;<span>Upload your documents</span>&nbsp;<span><small>(Doc, Docx, Text, PDF, Markdown)</small></span>
+          </h1>
+          <div class="full-width"> <!-- for Firefox -->
+            <label for="upload-button">
+              <input class="hidden" id="upload-button" name="upload-button" type="file" accept=".doc, .docx, .txt, .pdf, .md">
+              <span class="upload-wrapper button form-button block tabbed">
+                <i class="fa fa-cloud-upload fa-fw" aria-hidden="true"></i>&nbsp;
+                Upload a new file
+              </span>
+            </label>
+          </div>
+          <div class="thin-border-table-wrapper tabbed">
+            <table class="thin-border-table">
+              <tr>
+                <th>FILE NAME</th>
+                <th>FILE SIZE</th>
+                <th>NUMBER OF WORDS</th>
+                <th>REMOVE</th>
+              </tr>
+              <tr>
+                <td>
+                  <i class="fa fa-file-text fa-fw" aria-hidden="true"></i>&nbsp;
+                  business_operations.docx
+                </td>
+                <td>78kb</td>
+                <td>842</td>
+                <td>
+                  <button class="trash-button" type="button">
+                    <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="fa fa-file-text fa-fw" aria-hidden="true"></i>&nbsp;
+                  business_financial.docx
+                </td>
+                <td>26kb</td>
+                <td>2,326</td>
+                <td>
+                  <button class="trash-button" type="button">
+                    <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </fieldset>
+        <fieldset class="step-2">
+          <!-- <legend>STEP 2</legend> -->
+          <h1 class="step-styled padded">
+            &#9313;&nbsp;Choose your language pairings
+          </h1>
+          <table class="fictive-table tabbed" id="fictive-table">
+            <tr>
+              <th class="right-justified">FROM</th>
+              <th>
+                <label class="select-wrapper-2" for="from-lang">
+                  <select class="select-hidden" id="from-lang" name="from-lang">
+                    <option>English</option>
+                    <option>Arabic</option>
+                    <option>Kurdish</option>
+                  </select>
+                </label>
+              </th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            <tr>
+              <th class="right-justified">TO</th>
+              <th>
+                <label class="select-wrapper-2" for="to-lang">
+                  <select class="select-hidden" id="to-lang" name="to-lang">
+                    <option>Arabic</option>
+                    <option>English</option>
+                    <option>Kurdish</option>
+                  </select>
+                </label>
+              </th>
+              <th>
+                <label class="select-wrapper-2" for="add-lang">
+                  <select class="select-hidden" id="add-lang" name="add-lang">
+                    <option>Kurdish</option>
+                    <option>English</option>
+                    <option>Arabic</option>
+                  </select>
+                </label>
+              </th>
+              <th>
+                <button class="trash-button trash-icon" type="button">
+                  <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+                </button>
+              </th>
+              <th>
+                <button class="add-button" type="button">
+                  <i class="fa fa-plus fa-fw" aria-hidden="true"></i>&nbsp;
+                  ADD
+                </button>
+              </th>
+            </tr>
+          </table>
+        </fieldset>
+        <fieldset class="step-3">
+          <!-- <legend>STEP 3</legend> -->
+          <h1 class="step-styled padded">
+            &#9314;&nbsp;Select your desired tone
+          </h1>
+          <ul class="tabbed dots-hidden">
+            <li class="padded">
+              <div class="wrapper">
+                <label class="select-type" for="friendly-casual">
+                  <input class="hidden" id="friendly-casual" name="tone" type="radio" value="Friendly/Casual" required checked>
+                  <span class="select-wrapper block with-padding">
+                    <i class="fa fa-comments fa-fw" aria-hidden="true"></i>&nbsp;
+                    Friendly/Casual
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="padded">
+              <div class="wrapper">
+                <label class="select-type" for="corporate-pro">
+                  <input class="hidden" id="corporate-pro" name="tone" type="radio" value="Corporate/Pro" required>
+                  <span class="select-wrapper block with-padding">
+                    <i class="fa fa-suitcase fa-fw" aria-hidden="true"></i>&nbsp;
+                    Corporate/Pro
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="padded">
+              <div class="wrapper">
+                <label class="select-type" for="media-formal">
+                  <input class="hidden" id="media-formal" name="tone" type="radio" value="Media/Formal" required>
+                  <span class="select-wrapper block with-padding">
+                    <i class="fa fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;
+                    Media/Formal
+                  </span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="step-4">
+          <!-- <legend>STEP 4</legend> -->
+          <h1 class="step-styled padded">
+            &#9315;&nbsp;Tell us how urgent this job is
+          </h1>
+          <div class="flex-container spaced-around">
+            <div class="flex-container four-fifth-width">
+              <div class="full-width padded">
+                <input name="urgency" id="urgency" type="range" value=1 min=0 max=2 step=1>
+              </div>
+              <div class="flex-container full-width bottom-padded">
+                <span>I GOT TIME</span><span class="orange">AVERAGE</span><span>YESTERDAY</span>
+              </div>
+            </div>
+            <div class="box">
+              <!-- <legend>TIMELINE INFO</legend> -->
+              <h2>
+                <i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>&nbsp;
+                TIMELINE INFO
+              </h2>
+              <p class="justified">
+                With an <span class="orange">AVERAGE</span> timeline set up, our expert translator can take a reasonable amount of time perfecting your translation
+              </p>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="step-5">
+          <!-- <legend>STEP 5</legend> -->
+          <h1 class="step-styled padded">
+            &#9316;&nbsp;Sign up and choose a payment method
+          </h1>
+          <p class="caption tabbed top-padded bottom-padded">
+            Already have an account with us? <a href="#">Sign In</a>.
+          </p>
+          <div class="flex-start tabbed">
+              <div>
+                  <p class="caption">
+                    FULL NAME
+                  </p>
+                <input 
+                  class="input-field" 
+                  required id="full-name" 
+                  type="text" 
+                  name="full-name" 
+                  value="Andrew A. Omelchenko"
+                  title="Please enter your full name here">
+                  <label for="full-name"></label>
+              </div>
+          </div>
+          <div class="flex-start tabbed">
+            <div>
+              <p class="caption">
+                EMAIL ADDRESS
+              </p>
+              <input 
+                class="input-field"
+                id="e-mail"
+                name="e-mail"   
+                type="email"  
+                value="andrewom43@gmail.com"
+                title="Enter valid e-mail address"
+                required>
+              <label for="e-mail"></label>
+            </div>
+            <div>
+              <p class="caption">
+                CHOOSE A PASSWORD
+              </p>
+              <input 
+                class="input-field" 
+                id="psw" 
+                name="psw"
+                type="password" 
+                title="Password should be at least 6 characters long"  
+                minlength="6"
+                placeholder="******"
+                required>
+              <label for="psw"></label>
+            </div>
+          </div>
+          <div class="flex-container spaced-between tabbed seven-tenth-width">
+            <div class="wrapper quartered">
+              <label class="select-type" for="by-card">
+                <input class="hidden" id="by-card" name="payment-type" type="radio" value="by-card" required checked>
+                <span class="select-wrapper block center">
+                  <img class="select-img three-times-quartered" src="img/cards.png" alt="Cards">
+                </span>
+              </label>
+            </div>
+            <div class="wrapper quartered">
+              <label class="select-type" for="by-paypal">
+                <input class="hidden" id="by-paypal" name="payment-type" type="radio" value="by-paypal" required>
+                <span class="select-wrapper block center">
+                  <img class="select-img three-times-quartered" src="img/paypal.png" alt="PayPal">
+                </span>
+              </label>
+            </div>
+            <div class="wrapper quartered">
+              <label class="select-type" for="by-amazon">
+                <input class="hidden" id="by-amazon" name="payment-type" type="radio" value="by-amazon" required>
+                <span class="select-wrapper block center">
+                  <img class="select-img three-times-quartered" src="img/amazon.png" alt="Amazon">
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="flex-start tabbed with-top-margin">
+            <div>
+              <p class="caption">
+                CARD NUMBER
+              </p>
+              <label class="card-number-wrapper" for="card-number">
+              <input 
+                class="input-field-2 wide center"
+                id="card-number" 
+                name="card-number" 
+                type="text"
+                title="Enter 16-digit card number" 
+                maxlength="16"
+                placeholder="################"
+                pattern="[0-9]{16}">
+              </label>
+            </div>
+            <div>
+              <p class="caption">
+                EXPIRY DATE
+              </p>
+              <input 
+                class="input-field-2 center" 
+                id="expiry-date" 
+                name="expiry-date" 
+                type="text" 
+                title="Enter your card's expiry date" 
+                placeholder="DD/MM/YY">
+            </div>
+            <div>
+              <p class="caption">
+                CODE
+              </p>
+              <input 
+                class="input-field-2 center" 
+                id="cvv" 
+                name="cvv" 
+                type="password" 
+                title="Enter 3-digit CVV code here" 
+                maxlength="3"
+                placeholder="***"
+                pattern="[0-9][0-9][0-9]">
+            </div>
+        </div>
+        </fieldset>
+      </section>
+      <section class="flex-end">
+        <!-- <legend>FINAL ACTIONS</legend> -->
+        <label class="right-tabbed" for="terms-checkbox">
+          <input id="terms-checkbox" name="terms-and-conditions" type="checkbox" value="agreed">
+          I agree to the <a href="#">Terms &amp; Conditions</a>
+        </label>
+        <button class="button submit right-tabbed" id="place-order-button-2" type="submit">
+          PLACE ORDER
+        </button>
+        <button class="button form-button right-tabbed" id="print-a-quote-button-2" type="button">
+          PRINT A QUOTE
+        </button>
+      </section>
+    </form>
+    <footer class="main-footer">
+      <div class="footer-filler"></div>
+      <div class="footer-body flex-container">
+        <div class="one-fifth-width">
+          <h2 class="bottom-padded">
+              <i class="fa fa-heart fa-fw" aria-hidden="true"></i>&nbsp;
+              WHAT WE DO
+          </h2>
+          <p class="tabbed-less">
+              We provide a full range of language services including content development, 
+              document, website and social media accounts translations.
+          </p>
+        </div>
+        <div class="one-fifth-width">
+          <h2 class="bottom-padded">
+            <i class="fa fa-compass fa-fw" aria-hidden="true"></i>&nbsp;
+            OUR MAIN OFFICE
+          </h2>
+          <address class="tabbed-less">
+            <ul>
+              <li class="less-bottom-padded">Dubai, UAE</li>
+              <li class="less-bottom-padded">P.O. Box: 502735</li>
+              <li class="less-bottom-padded">Phone: +971(0)44278128</li>
+            </ul>
+          </address>
+        </div>
+        <div class="one-fifth-width">
+          <h2 class="bottom-padded">
+            <i class="fa fa-share-alt fa-fw" aria-hidden="true"></i>&nbsp;
+            CONNECT WITH US
+          </h2>
+            <ul class="dots-hidden tabbed-less">
+              <li class="less-bottom-padded">
+                <i class="fa fa-facebook-official fa-fw" aria-hidden="true"></i>&nbsp;Facebook
+              </li>
+              <li class="less-bottom-padded">
+                <i class="fa fa-twitter-square fa-fw" aria-hidden="true"></i>&nbsp;Twitter
+              </li>
+              <li class="less-bottom-padded">
+                <i class="fa fa-linkedin-square fa-fw" aria-hidden="true"></i>&nbsp;LinkedIn
+              </li>
+            </ul>
+          </div>
+          <img class="logo" src="img/darklogo.png" alt="logo">
+        </div>
+      <div class="footer-filler"></div>
+    </footer>
+  </body>
+</html>
