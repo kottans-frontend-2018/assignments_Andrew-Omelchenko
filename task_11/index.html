@@ -85,25 +85,25 @@
               <div class="image-radio wrapper">
                 <label class="select-type" for="website">
                   <input class="hidden" id="website" name="trans-type" type="radio" value="Website" required>
-                  <div class="select-wrapper">
+                  <span class="select-wrapper block">
                     <img class="select-img tile" src="img/website.png" alt="Website">
-                  </div>
+                  </span>
                 </label>
               </div>
               <div class="image-radio wrapper">
                 <label class="select-type" for="documents">
                   <input class="hidden" id="documents" name="trans-type" type="radio" value="Documents" required checked>
-                  <div class="select-wrapper">
+                  <span class="select-wrapper block">
                     <img class="select-img tile" src="img/documents.png" alt="Documents">
-                  </div>
+                  </span>
                 </label>
               </div>
               <div class="image-radio wrapper">
                 <label class="select-type" for="social-account">
                   <input class="hidden" id="social-account" name="trans-type" type="radio" value="Social Account" required>
-                  <div class="select-wrapper">
+                  <span class="select-wrapper block">
                     <img class="select-img tile" src="img/social-account.png" alt="Social Account">
-                  </div>
+                  </span>
                 </label>
               </div>
           </div>
@@ -113,13 +113,15 @@
           <h1 class="step-styled padded">
             &#9312;&nbsp;<span>Upload your documents</span>&nbsp;<span><small>(Doc, Docx, Text, PDF, Markdown)</small></span>
           </h1>
-          <label for="upload-button">
-            <input class="hidden" id="upload-button" name="upload-button" type="file" accept=".doc, .docx, .txt, .pdf, .md">
-            <div class="upload-wrapper button form-button tabbed">
-              <i class="fa fa-cloud-upload fa-fw" aria-hidden="true"></i>&nbsp;
-              Upload a new file
-            </div>
-          </label>
+          <div class="full-width"> <!-- for Firefox -->
+            <label for="upload-button">
+              <input class="hidden" id="upload-button" name="upload-button" type="file" accept=".doc, .docx, .txt, .pdf, .md">
+              <span class="upload-wrapper button form-button block tabbed">
+                <i class="fa fa-cloud-upload fa-fw" aria-hidden="true"></i>&nbsp;
+                Upload a new file
+              </span>
+            </label>
+          </div>
           <div class="thin-border-table-wrapper tabbed">
             <table class="thin-border-table">
               <tr>
@@ -218,45 +220,39 @@
             &#9314;&nbsp;Select your desired tone
           </h1>
           <ul class="tabbed dots-hidden">
-              <li class="padded">
-                <div class="wrapper">
-                  <label class="select-type" for="friendly-casual">
-                      <input class="hidden" id="friendly-casual" name="tone" type="radio" value="Friendly/Casual" required checked>
-                      <div class="select-wrapper">
-                        <p class="with-padding">
-                          <i class="fa fa-comments fa-fw" aria-hidden="true"></i>&nbsp;
-                          Friendly/Casual
-                        </p>
-                      </div>
-                  </label>
-                </div>
-              </li>
-              <li class="padded">
-                <div class="wrapper">
-                  <label class="select-type" for="corporate-pro">
-                      <input class="hidden" id="corporate-pro" name="tone" type="radio" value="Corporate/Pro" required>
-                      <div class="select-wrapper padded-more">
-                        <p class="with-padding">
-                          <i class="fa fa-suitcase fa-fw" aria-hidden="true"></i>&nbsp;
-                          Corporate/Pro
-                        </p>
-                      </div>
-                  </label>
-                </div>
-              </li>
-              <li class="padded">
-                <div class="wrapper">
-                  <label class="select-type" for="media-formal">
-                      <input class="hidden" id="media-formal" name="tone" type="radio" value="Media/Formal" required>
-                      <div class="select-wrapper padded-more">
-                        <p class="with-padding">
-                          <i class="fa fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;
-                          Media/Formal
-                        </p>
-                      </div>
-                  </label>
-                </div>
-              </li>
+            <li class="padded">
+              <div class="wrapper">
+                <label class="select-type" for="friendly-casual">
+                  <input class="hidden" id="friendly-casual" name="tone" type="radio" value="Friendly/Casual" required checked>
+                  <span class="select-wrapper block with-padding">
+                    <i class="fa fa-comments fa-fw" aria-hidden="true"></i>&nbsp;
+                    Friendly/Casual
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="padded">
+              <div class="wrapper">
+                <label class="select-type" for="corporate-pro">
+                  <input class="hidden" id="corporate-pro" name="tone" type="radio" value="Corporate/Pro" required>
+                  <span class="select-wrapper block with-padding">
+                    <i class="fa fa-suitcase fa-fw" aria-hidden="true"></i>&nbsp;
+                    Corporate/Pro
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li class="padded">
+              <div class="wrapper">
+                <label class="select-type" for="media-formal">
+                  <input class="hidden" id="media-formal" name="tone" type="radio" value="Media/Formal" required>
+                  <span class="select-wrapper block with-padding">
+                    <i class="fa fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;
+                    Media/Formal
+                  </span>
+                </label>
+              </div>
+            </li>
           </ul>
         </fieldset>
         <fieldset class="step-4">
@@ -343,25 +339,25 @@
             <div class="wrapper quartered">
               <label class="select-type" for="by-card">
                 <input class="hidden" id="by-card" name="payment-type" type="radio" value="by-card" required checked>
-                <div class="select-wrapper center">
+                <span class="select-wrapper block center">
                   <img class="select-img three-times-quartered" src="img/cards.png" alt="Cards">
-                </div>
+                </span>
               </label>
             </div>
             <div class="wrapper quartered">
               <label class="select-type" for="by-paypal">
                 <input class="hidden" id="by-paypal" name="payment-type" type="radio" value="by-paypal" required>
-                <div class="select-wrapper center">
+                <span class="select-wrapper block center">
                   <img class="select-img three-times-quartered" src="img/paypal.png" alt="PayPal">
-                </div>
+                </span>
               </label>
             </div>
             <div class="wrapper quartered">
               <label class="select-type" for="by-amazon">
                 <input class="hidden" id="by-amazon" name="payment-type" type="radio" value="by-amazon" required>
-                <div class="select-wrapper center">
+                <span class="select-wrapper block center">
                   <img class="select-img three-times-quartered" src="img/amazon.png" alt="Amazon">
-                </div>
+                </span>
               </label>
             </div>
           </div>

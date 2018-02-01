@@ -558,6 +558,10 @@ p {
   overflow:hidden;
 }
 
+.block {
+  display: block;
+}
+
 /* Styles for checked borders (new - from lecture) */
 
 .select-wrapper {
@@ -599,7 +603,7 @@ input[type="radio"]:focus + .select-wrapper {
 
 /* Upload wrapper */
 .upload-wrapper{
-  width: 243px;
+  width: 189px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -607,7 +611,7 @@ input[type="radio"]:focus + .select-wrapper {
   align-items: center;
 }
 
-input[type="file"]:focus + div {
+input[type="file"]:focus + span {
   box-shadow: 0 0 3px rgba(0, 0, 255, 1);
 }
 
