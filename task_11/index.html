@@ -84,7 +84,7 @@
           <div class="flex-container spaced-around">
               <div class="image-radio wrapper">
                 <label class="select-type" for="website">
-                  <input id="website" name="trans-type" type="radio" value="Website" required hidden>
+                  <input class="hidden" id="website" name="trans-type" type="radio" value="Website" required>
                   <div class="select-wrapper">
                     <img class="select-img tile" src="img/website.png" alt="Website">
                   </div>
@@ -92,7 +92,7 @@
               </div>
               <div class="image-radio wrapper">
                 <label class="select-type" for="documents">
-                  <input id="documents" name="trans-type" type="radio" value="Documents" required hidden checked>
+                  <input class="hidden" id="documents" name="trans-type" type="radio" value="Documents" required checked>
                   <div class="select-wrapper">
                     <img class="select-img tile" src="img/documents.png" alt="Documents">
                   </div>
@@ -100,7 +100,7 @@
               </div>
               <div class="image-radio wrapper">
                 <label class="select-type" for="social-account">
-                  <input id="social-account" name="trans-type" type="radio" value="Social Account" required hidden>
+                  <input class="hidden" id="social-account" name="trans-type" type="radio" value="Social Account" required>
                   <div class="select-wrapper">
                     <img class="select-img tile" src="img/social-account.png" alt="Social Account">
                   </div>
@@ -113,10 +113,12 @@
           <h1 class="step-styled padded">
             &#9312;&nbsp;<span>Upload your documents</span>&nbsp;<span><small>(Doc, Docx, Text, PDF, Markdown)</small></span>
           </h1>
-          <label class="upload-wrapper button form-button tabbed" for="upload-button">
-            <input id="upload-button" name="upload-button" type="file" accept=".doc, .docx, .txt, .pdf, .md">
+          <label for="upload-button">
+            <input class="hidden" id="upload-button" name="upload-button" type="file" accept=".doc, .docx, .txt, .pdf, .md">
+            <div class="upload-wrapper button form-button tabbed">
               <i class="fa fa-cloud-upload fa-fw" aria-hidden="true"></i>&nbsp;
-              Upload a new file 
+              Upload a new file
+            </div>
           </label>
           <div class="thin-border-table-wrapper tabbed">
             <table class="thin-border-table">
@@ -219,7 +221,7 @@
               <li class="padded">
                 <div class="wrapper">
                   <label class="select-type" for="friendly-casual">
-                      <input id="friendly-casual" name="tone" type="radio" value="Friendly/Casual" required hidden checked>
+                      <input class="hidden" id="friendly-casual" name="tone" type="radio" value="Friendly/Casual" required checked>
                       <div class="select-wrapper">
                         <p class="with-padding">
                           <i class="fa fa-comments fa-fw" aria-hidden="true"></i>&nbsp;
@@ -232,7 +234,7 @@
               <li class="padded">
                 <div class="wrapper">
                   <label class="select-type" for="corporate-pro">
-                      <input id="corporate-pro" name="tone" type="radio" value="Corporate/Pro" required hidden>
+                      <input class="hidden" id="corporate-pro" name="tone" type="radio" value="Corporate/Pro" required>
                       <div class="select-wrapper padded-more">
                         <p class="with-padding">
                           <i class="fa fa-suitcase fa-fw" aria-hidden="true"></i>&nbsp;
@@ -245,7 +247,7 @@
               <li class="padded">
                 <div class="wrapper">
                   <label class="select-type" for="media-formal">
-                      <input id="media-formal" name="tone" type="radio" value="Media/Formal" required hidden>
+                      <input class="hidden" id="media-formal" name="tone" type="radio" value="Media/Formal" required>
                       <div class="select-wrapper padded-more">
                         <p class="with-padding">
                           <i class="fa fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;
@@ -340,7 +342,7 @@
           <div class="flex-container spaced-between tabbed seven-tenth-width">
             <div class="wrapper quartered">
               <label class="select-type" for="by-card">
-                <input id="by-card" name="payment-type" type="radio" value="by-card" required hidden checked>
+                <input class="hidden" id="by-card" name="payment-type" type="radio" value="by-card" required checked>
                 <div class="select-wrapper center">
                   <img class="select-img three-times-quartered" src="img/cards.png" alt="Cards">
                 </div>
@@ -348,7 +350,7 @@
             </div>
             <div class="wrapper quartered">
               <label class="select-type" for="by-paypal">
-                <input id="by-paypal" name="payment-type" type="radio" value="by-paypal" required hidden>
+                <input class="hidden" id="by-paypal" name="payment-type" type="radio" value="by-paypal" required>
                 <div class="select-wrapper center">
                   <img class="select-img three-times-quartered" src="img/paypal.png" alt="PayPal">
                 </div>
@@ -356,7 +358,7 @@
             </div>
             <div class="wrapper quartered">
               <label class="select-type" for="by-amazon">
-                <input id="by-amazon" name="payment-type" type="radio" value="by-amazon" required hidden>
+                <input class="hidden" id="by-amazon" name="payment-type" type="radio" value="by-amazon" required>
                 <div class="select-wrapper center">
                   <img class="select-img three-times-quartered" src="img/amazon.png" alt="Amazon">
                 </div>
