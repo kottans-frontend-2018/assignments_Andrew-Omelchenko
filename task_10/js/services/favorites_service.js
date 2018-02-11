@@ -1,4 +1,7 @@
-class FavoritesService extends ListService {
+import * as config from "../config.js";
+import { ListService } from "./../services/list_service.js";
+
+export class FavoritesService extends ListService {
   constructor(storageSvc, name) {
     super(storageSvc, name);
   }
@@ -12,7 +15,7 @@ class FavoritesService extends ListService {
       }
     }
     // check length limit
-    if (this._data.length == limit) {
+    if (this._data.length == config.limit) {
       this._data.pop();
     }
     // add item
