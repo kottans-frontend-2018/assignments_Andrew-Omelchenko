@@ -1,0 +1,210 @@
+@import "_base";
+
+/* Normalize styles */
+* {
+  margin: 0;
+  padding: 0;
+  /* all elements inside body inherit one's box-sizing */
+  box-sizing: inherit;
+}
+
+html {
+  /* root font-size is equal 10px, if default font-size is 16px */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  background: $bg-color-main-body;
+}
+
+@media screen and (max-width: 320px) {
+  .container,
+  .list-panel {
+		width: 320px;
+	}
+}
+
+@media screen and (min-width: 321px) {
+  .container,
+  .list-panel {
+		width: 320px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.list-panel {
+  font-size: 10pt;
+  text-align: justify;
+  padding: 5px;
+}
+
+.container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+  .main-panel,
+  .day-panel {
+    background: $bg-color-main-panel;
+    border: 1px solid $border-color;
+    line-height: 1.5;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+  }
+
+  .main-panel {
+    width: 100%;
+    padding: 20px;  
+    border-radius: 10px;
+
+    .left-panel,
+    .right-panel {
+      flex-direction: column;
+    }
+
+    .left-panel {
+      width: 70%;
+      align-content: left;
+      align-items: left;
+      text-align: left;
+    }
+
+    .right-panel {
+      width: 30%;
+      align-content: right;
+      align-items: right;
+      text-align: right;
+    }
+  }
+
+  .day-panel {
+    width: 30%;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 7px 0 7px 0;
+    text-align: center;
+  }
+}
+
+.img-container,
+.img {
+  width: 100%;
+}
+
+.btn {
+	font-size: 12pt;
+	border-radius: 5px;
+	border: 1px solid $border-color;
+	color: $fg-color-main-body;
+	background: $bg-color-main-body;
+	padding: 5px 8px 5px 8px;
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+	&.btn-active {
+		opacity: 1;
+		transition: all .2s;
+	
+		&:hover,
+		&:focus {
+			transform: translate(-2px, -2px);
+			box-shadow: 4px 4px 10px rgba(0, 0, 0, .5);
+		}
+	
+		&:active {
+			transform: translate(-1px, -1px);
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+		}
+	}
+}
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+}
+
+.search-fld {
+  width: 185px;
+}
+
+.fa-star,
+.fa-history {
+  color: $fg-color-sign;
+}
+
+/* Customize the label (the container) */
+.checkbox-container {
+  display: block;
+  position: relative;
+  width: $size;
+  height: $size;
+  cursor: pointer;
+  font-size: 16pt;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* Hide the browser's default checkbox */
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $size;
+    width: $size;
+    background-color: $alert-color;
+    border-radius: 5px;
+	  border: 1px solid $border-color;
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    &:after {
+      font-family: "FontAwesome";
+      content: "\f089";
+      color: $bg-color-main-body;
+      display: block;
+      position: absolute;
+      top: 3px;
+      left: 5px;
+      font-size: 16pt;
+      z-index: 1;
+    }
+  }
+
+  /* On mouse-over, add a grey background color */
+  &:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  input:checked ~ .checkmark {
+    background-color: $bg-color-main-panel;
+  }
+
+  /* Show the checkmark when checked */
+  input:checked ~ .checkmark:after {
+    font-family: "FontAwesome";
+    content: "\f005";
+    color: $fg-color-sign;
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    font-size: 16pt;
+    z-index: 1;
+  }
+}
